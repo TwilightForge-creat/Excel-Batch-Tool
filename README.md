@@ -1,2 +1,20 @@
 # Excel-Batch-Tool
-A simple GUI tool for batch processing Excel files. 
+
+一个基于 Python 和 Pandas 的高效 Excel 批量处理命令行工具。旨在帮助用户告别繁琐的重复性复制粘贴，实现一键式数据清洗。
+
+## ✨ 功能特性
+- **批量处理**：自动遍历指定输入文件夹下的所有 Excel 文件。
+- **格式兼容**：完美支持 `.xlsx` 和旧版 `.xls` 格式（底层自动调用 `openpyxl` 和 `xlrd`）。
+- **健壮性**：内置严谨的 `try...except` 机制，单个坏文件不会导致程序崩溃，并附带详细日志。
+- **自动化路由**：自动创建 `output` 文件夹保存结果，绝不覆盖原文件。
+
+## 🛠️ 技术栈
+- Python 3.10
+- Pandas (数据处理)
+- PyInstaller (二进制打包)
+
+## 🚀 如何使用
+1. 下载 Release 中的 `.exe` 文件。
+2. 在 `.exe` 同级目录下新建一个名为 `input` 的文件夹。
+3. 将需要处理的表格丢进 `input`。
+4. 双击运行 `.exe`，处理好的文件会出现在自动生成的 `output` 文件夹里。
